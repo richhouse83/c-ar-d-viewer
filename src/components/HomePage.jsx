@@ -14,7 +14,7 @@ export default function HomePage() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(fileName, fileType);
-    navigate(`/${fileName}/${fileType}`);
+    navigate(`/c-ar-d-viewer/${fileName}/${fileType}`);
   };
   return (
     <section>
