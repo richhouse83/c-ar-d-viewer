@@ -4,7 +4,7 @@ import HomePage from "./components/HomePage";
 
 function App() {
   return (
-    <Router>
+    <Router basepath="/c-ar-d-viewer">
       <HomePage path="/" />
       <AFrame path="/:file_id/:file_type" />
       {/* <VRFrame path="vr/:file_id/:file_type" /> */}

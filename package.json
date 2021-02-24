@@ -12,7 +12,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.0"
   },
-  "homepage": "http://richhouse83.github.io/c-ar-d-viewer",
+  "homepage": "https://richhouse83.github.io/c-ar-d-viewer/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
