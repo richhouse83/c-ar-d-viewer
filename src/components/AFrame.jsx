@@ -7,7 +7,11 @@ export default function AFrame({ file_type, file_id }) {
   return (
     <>
       <Controls videoRef={videoRef.current} />
-      <a-scene embed arjs="trackingMethod: best;">
+      <a-scene
+        embed
+        arjs="trackingMethod: best;"
+        device-orientation-permission-ui="enabled: false"
+      >
         <a-assets>
           <video
             id="video"
@@ -56,8 +60,7 @@ export default function AFrame({ file_type, file_id }) {
             id="screen"
             src="#video"
             position="0 1 -4"
-            width="3"
-            height="2"
+            scale="2 2 2"
             foo
           ></a-video>
           <a-entity id="player" camera></a-entity>
