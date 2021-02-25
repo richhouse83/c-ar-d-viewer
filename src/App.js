@@ -3,6 +3,7 @@ import AFrame from "./components/AFrame";
 import HomePage from "./components/HomePage";
 
 function App() {
+  console.log("update to v5");
   return (
     <Router
       basepath="/c-ar-d-viewer"
