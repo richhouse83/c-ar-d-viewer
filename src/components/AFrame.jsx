@@ -3,7 +3,7 @@ import Controls from "./Controls";
 
 export default function AFrame({ file_type, file_id }) {
   const videoRef = useRef(null);
-  console.log(file_id, file_type);
+  console.log("update to v4");
   return (
     <>
       <Controls videoRef={videoRef.current} />
@@ -26,7 +26,7 @@ export default function AFrame({ file_type, file_id }) {
           >
             <a-entity
               id="balloon1"
-              gltf-model="url(../../../balloon/scene.gltf)"
+              gltf-model="url(../../balloon/scene.gltf)"
               scale="0.1 0.1 0.1"
               position="1 3 -2"
               animation="property: object3D.position.y; to: 3.2; dir: alternate; dur: 2000; loop: true"
@@ -35,7 +35,7 @@ export default function AFrame({ file_type, file_id }) {
             ></a-entity>
             <a-entity
               id="balloonClust"
-              gltf-model="url(../../../balloon-cluster/scene.gltf)"
+              gltf-model="url(../../balloon-cluster/scene.gltf)"
               scale="0.2 0.2 0.2"
               position="-4 3.5 -1"
               animation__bob="property: object3D.position.y; to: 3.2; dir: alternate; dur: 1500; loop: true"
@@ -44,7 +44,7 @@ export default function AFrame({ file_type, file_id }) {
             ></a-entity>
             <a-entity
               id="balloon3"
-              gltf-model="url(../../../balloon/scene.gltf)"
+              gltf-model="url(../../balloon/scene.gltf)"
               scale="0.1 0.1 0.1"
               position="2 3.2 3"
               animation__bob="property: object3D.position.y; to: 4; dir: alternate; dur: 3000; loop: true"
