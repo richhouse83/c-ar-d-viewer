@@ -56,7 +56,7 @@ export default function AFrame({ file_type, file_id }) {
             id="screen"
             src="#video"
             look-at="src: #player"
-            position="0 1 -4"
+            position="0 1 0"
             scale="2 2 2"
             rotation="180 180 180"
           ></a-video>

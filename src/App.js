@@ -4,7 +4,10 @@ import HomePage from "./components/HomePage";
 
 function App() {
   return (
-    <Router basepath="/c-ar-d-viewer" style={{ height: "100%" }}>
+    <Router
+      basepath="/c-ar-d-viewer"
+      style={{ height: "100%", width: "100%", overflow: "hidden" }}
+    >
       <HomePage path="/" />
       <AFrame path="/:file_id/:file_type" />
       {/* <VRFrame path="vr/:file_id/:file_type" /> */}
