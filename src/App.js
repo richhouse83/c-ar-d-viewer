@@ -3,7 +3,7 @@ import Controls from "./components/Controls";
 import "./App.css";
 
 function App() {
-  console.log("update to v6");
+  console.log("update to v7");
   const videoRef = useRef(null);
   const searchParams = new URLSearchParams(window.location.search);
   const video_id = searchParams.get("video");
