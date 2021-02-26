@@ -1,15 +1,27 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Controls from "./components/Controls";
+import "./App.css";
 
 function App() {
   console.log("update to v6");
   const videoRef = useRef(null);
   const searchParams = new URLSearchParams(window.location.search);
   const video_id = searchParams.get("video");
+
+  useEffect(() => {
+    const aCanvas = document.querySelector(".a-canvas");
+    aCanvas.classList.remove("a-canvas");
+    aCanvas.classList.add("override");
+  }, []);
   return (
     <>
       <Controls videoRef={videoRef.current} />
-      <a-scene embed arjs="trackingMethod: best;">
+      <a-scene
+        vr-mode-ui={false}
+        embed
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+        id="aframebox"
+      >
         <a-assets>
           <video
             id="video"
@@ -59,7 +71,8 @@ function App() {
             src="#video"
             look-at="src: #player"
             position="0 1 0"
-            scale="2 2 2"
+            height="2"
+            width="4"
             rotation="180 180 180"
           ></a-video>
         </a-marker>
