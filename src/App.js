@@ -77,7 +77,7 @@ function App() {
             rotation="0 0 0"
           ></a-video>
         </a-marker>
-        <a-entity id="player" camera></a-entity>
+        <a-entity id="player" camera position="0 0 -3"></a-entity>
       </a-scene>
     </>
   );
