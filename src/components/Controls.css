@@ -1,6 +1,6 @@
 .buttons {
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   left: 0;
   width: 100%;
   height: 5em;
@@ -10,12 +10,33 @@
   z-index: 10;
 }
 
-.play-button {
-  padding: 0.25em;
-  border-radius: 4px;
+.messages {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.play-button,
+.instructions {
+  padding: 1.5em;
+  border-radius: 20px;
   border: none;
+  font-size: 1.5rem;
   background: white;
   color: black;
-  width: 4em;
-  height: 2em;
+  opacity: 0.8;
+  transition: opacity 400ms;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+
+button:disabled {
+  opacity: 0;
+  transition: 400ms;
 }
