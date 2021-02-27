@@ -69,14 +69,12 @@ function App() {
           <a-video
             id="screen"
             src="#video"
-            look-at="src: #player"
             position="0 1 -3"
             height="2"
             width="4"
             rotation="0 0 0"
           ></a-video>
         </a-marker>
-        <a-entity id="player" camera></a-entity>
       </a-scene>
     </>
   );
