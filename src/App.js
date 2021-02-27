@@ -3,7 +3,7 @@ import Controls from "./components/Controls";
 import "./App.css";
 
 function App() {
-  console.log("update to v7");
+  console.log("update to v8");
   const videoRef = useRef(null);
   const searchParams = new URLSearchParams(window.location.search);
   const video_id = searchParams.get("video");
@@ -70,10 +70,10 @@ function App() {
             id="screen"
             src="#video"
             look-at="src: #player"
-            position="0 1 0"
+            position="0 1 -3"
             height="2"
             width="4"
-            rotation="180 180 180"
+            rotation="0 0 0"
           ></a-video>
         </a-marker>
         <a-entity id="player" camera></a-entity>
