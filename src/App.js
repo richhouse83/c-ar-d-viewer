@@ -20,7 +20,7 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("0.11.0");
+    console.log("0.11.1");
     const aCanvas = document.querySelector(".a-canvas");
     const hiro = document.querySelector("#hiro");
     const scene = hiro.sceneEl;
@@ -66,8 +66,8 @@ function App() {
             src="#video"
             look-at="src: #player"
             position="0 0 -2"
-            height="2"
-            width="4"
+            height="4"
+            width="2"
             rotation="0 0 0"
           ></a-video>
 
