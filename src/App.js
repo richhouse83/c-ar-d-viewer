@@ -20,7 +20,7 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("update to v11");
+    console.log("0.11.0");
     const aCanvas = document.querySelector(".a-canvas");
     const hiro = document.querySelector("#hiro");
     const scene = hiro.sceneEl;
@@ -60,12 +60,12 @@ function App() {
           ></video>
         </a-assets>
         <a-marker id="hiro" preset="hiro">
-          <a-text value={message} position="-1 3 -3" look-at="#player"></a-text>
+          <a-text value={message} position="-1 2 -3" look-at="#player"></a-text>
           <a-video
             id="screen"
             src="#video"
             look-at="src: #player"
-            position="0 1.6 -2"
+            position="0 0 -2"
             height="2"
             width="4"
             rotation="0 0 0"
