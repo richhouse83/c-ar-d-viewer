@@ -30,7 +30,7 @@ export default function Controls({ video, markerFound, instructions }) {
 
   const handleARPosition = () => {
     const container = document.querySelector("#container");
-    container.object3D.rotation.x += upright ? 90 : -90;
+    container.object3D.rotation.x += upright ? -90 : 90;
     setUpright((prev) => !prev);
   };
 
