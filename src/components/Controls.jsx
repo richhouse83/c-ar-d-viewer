@@ -3,6 +3,7 @@ import "./Controls.css";
 
 export default function Controls({ video, markerFound, instructions }) {
   const [playing, setPlaying] = useState(false);
+  const [upright, setUpright] = useState(true);
 
   if (!video) {
     video = document.querySelector("#video");
@@ -27,6 +28,12 @@ export default function Controls({ video, markerFound, instructions }) {
     }
   };
 
+  const handleARPosition = () => {
+    const container = document.querySelector("#container");
+    container.object3D.rotation.x += upright ? 90 : -90;
+    setUpright((prev) => !prev);
+  };
+
   return (
     <>
       {instructions && (
@@ -45,6 +52,13 @@ export default function Controls({ video, markerFound, instructions }) {
           ) : (
             <i className="fas fa-play"></i>
           )}
+        </button>
+        <button
+          onClick={handleARPosition}
+          disabled={!markerFound}
+          className="play-button"
+        >
+          {upright ? "Flat" : "Upright"}
         </button>
       </div>
     </>
