@@ -64,7 +64,7 @@ function App() {
             <a-text
               value={message}
               position="-1 2 -3"
-              look-at="#player"
+              look-at="src: #player"
             ></a-text>
             <a-video
               id="screen"
