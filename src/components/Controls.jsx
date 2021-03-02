@@ -34,12 +34,13 @@ export default function Controls({ video, markerFound, instructions }) {
     console.log(screen);
     if (upright) {
       screen.removeAttribute("look-at");
+      console.log(screen)
     } else {
       screen.setAttribute("look-at", {
         src: "#player",
       });
     }
-    container.object3D.rotation.x += upright ? 90 : -90;
+    container.object3D.rotation.x += upright ? -90 : 90;
     setUpright((prev) => !prev);
   };
 
