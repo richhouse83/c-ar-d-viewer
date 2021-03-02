@@ -59,7 +59,7 @@ function App() {
             ref={videoRef}
           ></video>
         </a-assets>
-        <a-marker id="hiro" preset="hiro">
+        <a-marker id="hiro" smooth="true" smoothCount="10" preset="hiro">
           <a-entity id="container" position="0 0 0">
             <a-text
               value={message}
@@ -69,7 +69,7 @@ function App() {
             <a-video
               id="screen"
               src="#video"
-              look-at="src: #player"
+              // look-at="src: #player"
               position="0 0 -2"
               height="4"
               width="2"
