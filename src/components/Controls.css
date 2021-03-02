@@ -42,3 +42,12 @@ button:disabled {
   opacity: 0;
   transition: 400ms;
 }
+
+.fa-mobile {
+  transition: 400ms;
+}
+
+.rotated {
+  transform: rotate(-90deg);
+  transition: transform 400ms;
+}
