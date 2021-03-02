@@ -20,7 +20,7 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("c-ar-d-viewer 0.11.5");
+    console.log("c-ar-d-viewer 0.11.6");
     const aCanvas = document.querySelector(".a-canvas");
     const hiro = document.querySelector("#hiro");
     const scene = hiro.sceneEl;

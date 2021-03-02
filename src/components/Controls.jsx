@@ -39,7 +39,7 @@ export default function Controls({ video, markerFound, instructions }) {
         src: "#player",
       });
     }
-    container.object3D.rotation.x += upright ? -90 : 90;
+    container.object3D.rotation.x += upright ? 90 : -90;
     setUpright((prev) => !prev);
   };
 
