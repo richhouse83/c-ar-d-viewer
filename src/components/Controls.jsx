@@ -30,6 +30,15 @@ export default function Controls({ video, markerFound, instructions }) {
 
   const handleARPosition = () => {
     const container = document.querySelector("#container");
+    const screen = document.querySelector("#screen");
+    console.log(screen);
+    if (upright) {
+      screen.removeAttribute("look-at");
+    } else {
+      screen.setAttribute("look-at", {
+        src: "#player",
+      });
+    }
     container.object3D.rotation.x += upright ? -90 : 90;
     setUpright((prev) => !prev);
   };
