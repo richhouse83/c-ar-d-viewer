@@ -4,6 +4,10 @@ import "./Controls.css";
 export default function Controls({ video, markerFound, instructions }) {
   const [playing, setPlaying] = useState(false);
   const [upright, setUpright] = useState(true);
+  const [portrait, setPortrait] = useState(true);
+  const container = document.querySelector("#container");
+  const screen = document.querySelector("#screen");
+  const orient = document.querySelector("#orient");
 
   if (!video) {
     video = document.querySelector("#video");
@@ -27,19 +31,26 @@ export default function Controls({ video, markerFound, instructions }) {
       video.addEventListener("ended", endedAction);
     }
   };
+  const handleOrient = () => {
+    orient.classList.toggle("rotated");
+    screen.setAttribute("height", portrait ? 2 : 4);
+    screen.setAttribute("width", portrait ? 4 : 2);
+    setPortrait((prev) => !prev);
+  };
 
   const handleARPosition = () => {
-    const container = document.querySelector("#container");
-    const screen = document.querySelector("#screen");
     console.log(screen);
     if (upright) {
       screen.removeAttribute("look-at");
-      console.log(screen)
+      screen.object3D.position.set(0, 0, 0.2);
+      screen.object3D.rotation.set(0, 0, 0);
     } else {
       screen.setAttribute("look-at", {
         src: "#player",
       });
+      screen.object3D.position.set(0, 0, -2);
     }
+
     container.object3D.rotation.x += upright ? -90 : 90;
     setUpright((prev) => !prev);
   };
@@ -52,6 +63,13 @@ export default function Controls({ video, markerFound, instructions }) {
         </div>
       )}
       <div className="buttons">
+        <button
+          className="play-button"
+          disabled={!markerFound}
+          onClick={handleOrient}
+        >
+          <i id="orient" className="fas fa-mobile"></i>
+        </button>
         <button
           onClick={handleClick}
           disabled={!markerFound}
