@@ -38,6 +38,7 @@ function App() {
     };
   }, []);
 
+
   return (
     <>
       <Controls
@@ -76,7 +77,7 @@ function App() {
             ></a-video>
             <a-text
               value={message}
-              position="-1 3 1"
+              position="-0.8 3.5 1"
               look-at="src: #player"
             ></a-text>
             <a-entity
@@ -111,8 +112,18 @@ function App() {
             <a-entity
               id="cake"
               gltf-model="url(https://richhouse83.github.io/c-ar-d-viewer/cake/scene.gltf)"
-              scale="0.01 0.01 0.01"
+              scale="0.009 0.009 0.009"
               position="-2 0 -1"
+              animation__spin="property: rotation; to: 0 360 0; easing: easeInOutQuad; loop: true; dur: 4500"
+              animation__wobble="property: rotation; from: -8 0 9; to: 10 0 -8; dir: alternate; easing: easeInOutQuad; elasticity: 800; loop: true; dur: 1200"
+            ></a-entity>
+
+
+            <a-entity
+              id="gift_box"
+              gltf-model="url(https://raw.githubusercontent.com/richhouse83/c-ar-d-viewer/master/public/gift_box/scene.gltf)"
+              scale="0.5 0.5 0.5"
+              position="1.8 0.8 -1"
               animation__spin="property: rotation; to: 0 360 0; easing: easeInOutQuad; loop: true; dur: 4500"
               animation__wobble="property: rotation; from: -8 0 9; to: 10 0 -8; dir: alternate; easing: easeInOutQuad; elasticity: 800; loop: true; dur: 1200"
             ></a-entity>
