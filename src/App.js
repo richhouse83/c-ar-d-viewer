@@ -50,6 +50,7 @@ function App() {
         embed
         arjs="trackingMethod: best;"
         id="aframebox"
+        renderer="logarithmicDepthBuffer: true;"
       >
         <a-assets>
           <video
