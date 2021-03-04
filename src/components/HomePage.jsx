@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { navigate } from "@reach/router";
+import React, { useState } from 'react';
+import { navigate } from '@reach/router';
 
 export default function HomePage() {
-  const [fileName, setFileName] = useState("");
-  const [fileType, setFileType] = useState("");
+  const [fileName, setFileName] = useState('');
+  const [fileType, setFileType] = useState('');
 
   const handleFileChange = ({ target: { value } }) => {
     setFileName(value);
@@ -13,7 +13,6 @@ export default function HomePage() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(fileName, fileType);
     navigate(`/c-ar-d-viewer/${fileName}/${fileType}`);
   };
   return (
