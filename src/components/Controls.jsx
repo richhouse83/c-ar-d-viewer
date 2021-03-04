@@ -51,7 +51,7 @@ export default function Controls({ video, markerFound, instructions }) {
       screen.object3D.position.set(0, 0, -2);
     }
 
-    container.object3D.rotation.x += upright ? -90 : 90;
+    container.object3D.rotation.x += upright ? -1.5708 : 1.5708;
     setUpright((prev) => !prev);
   };
 
