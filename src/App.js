@@ -62,13 +62,7 @@ function App() {
             ref={videoRef}
           ></video>
         </a-assets>
-        <a-marker
-          id="hiro"
-          smooth="true"
-          smoothCount="10"
-          type="pattern"
-          url="https://raw.githubusercontent.com/richhouse83/c-ar-d-viewer/master/public/pattern-cardllogosquare2.patt"
-        >
+        <a-marker id="hiro" smooth="true" smoothCount="10" preset="hiro">
           <a-entity id="container" position="0 0 0">
             <a-video
               id="screen"
