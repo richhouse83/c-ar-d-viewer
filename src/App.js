@@ -38,7 +38,6 @@ function App() {
     };
   }, []);
 
-
   return (
     <>
       <Controls
@@ -48,7 +47,6 @@ function App() {
       />
       <a-scene
         vr-mode-ui={false}
-        embed
         arjs="trackingMethod: best;"
         id="aframebox"
         renderer="logarithmicDepthBuffer: true;"
@@ -64,7 +62,13 @@ function App() {
             ref={videoRef}
           ></video>
         </a-assets>
-        <a-marker id="hiro" smooth="true" smoothCount="10" preset="hiro">
+        <a-marker
+          id="hiro"
+          smooth="true"
+          smoothCount="10"
+          type="pattern"
+          url="https://raw.githubusercontent.com/richhouse83/c-ar-d-viewer/gh-pages/pattern-cardllogosquare2.patt"
+        >
           <a-entity id="container" position="0 0 0">
             <a-video
               id="screen"
@@ -117,7 +121,6 @@ function App() {
               animation__spin="property: rotation; to: 0 360 0; easing: easeInOutQuad; loop: true; dur: 4500"
               animation__wobble="property: rotation; from: -8 0 9; to: 10 0 -8; dir: alternate; easing: easeInOutQuad; elasticity: 800; loop: true; dur: 1200"
             ></a-entity>
-
 
             <a-entity
               id="gift_box"
